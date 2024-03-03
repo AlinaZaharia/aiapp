@@ -1,38 +1,161 @@
-.App {
+
+.App{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#divNavbar{
+  flex: 1;
+  background-color: #8aa5fc  
+}
+
+#divIcons{
   text-align: center;
+  margin-top: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#divIstoric{
   display: flex;
   flex-direction: column;
+  flex: 3;
+  background-color: #f4f4f7  
+  
+}
+
+#butonNewChat:hover{
+  background-color: #eaeaf8;
+
+}
+
+#divPrincipal{
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+}
+
+#divUtilizator{
+  flex: 1;
+}
+
+#divContinut{
+  flex: 7.5;
+}
+
+#divMesaj{
+  flex: 1.5;
+  display: flex;
+  width: 100%;
+  border: 1px solid #f4f4f7
+}
+
+
+
+#inputMesaj :focus{
+  outline: none;
+}
+
+#parSend{
+  width: 40px;
+  height: 40px;
+  background-color: #8aa5fc;
+  border-radius: 10%;
+  text-align: center;
+  align-self: center;
+}
+
+#inputMesaj{
+  align-self: center;
+  background-color: rgb(245, 243, 243);
+}
+
+
+#divNewChat{
+  display: flex;
+  /* justify-content: center; */
+  width: 80%;
+  gap: 5px;
+  height: 40px;
+  margin-top: 40px;
+  margin-left: 20px;
+  padding-left: 5px;
+  padding-right: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 4%;
+  font-size: 18px;
+
 }
 
-.App-link {
-  color: #61dafb;
+#divNewChat:hover{
+  background-color: #eaeaf8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#divNewChat :nth-child(1){
+ 
 }
+#divNewChat :nth-child(2){
+  flex: 1;
+}
+
+#divMesaj{
+  height: 20px;
+}
+
+#divMare{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  
+}
+
+#divTop{
+  flex: 3;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+#pCreareCont{
+  font-size: 25px;
+  font-weight: bold;
+
+}
+
+#divForms{
+  flex: 7;
+  align-self: center;
+}
+
+.fieldsetRegister{
+  width: 300px;
+}
+
+.styleInputAccount{
+  border: none;
+  height: 25px;
+  width: 250px;
+}
+
+.styleInputAccount:focus{
+  outline: none;
+}
+
+#pEroare{
+  color: red;
+}
+
+
+#butonContinua, #creeazaCont{
+  color: #000;
+  border-color: #000;
+  width: 330px;
+  height: 40px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px
+
+}
+
+
