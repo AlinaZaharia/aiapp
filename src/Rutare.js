@@ -12,13 +12,15 @@ import { logare } from './diverse';
 let AccountContext = createContext();
 
 const Rutare = () => {
-  console.log('Executare')
+  // console.log('Executare')
   const auth = getAuth();
 
   
 
   useEffect (() => {
-    logare((dateAccount) => {setAccount(dateAccount)})
+    logare((dateAccount) => {
+      // console.log('rutare')
+      setAccount(dateAccount)})
     
   }, [])
   

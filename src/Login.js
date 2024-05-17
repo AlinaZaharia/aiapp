@@ -21,6 +21,7 @@ const Login = () => {
   useEffect (() => {console.log(account)}, [account])
 
   function obtinePrenumeLogat(uid) {
+    console.log('functia apelata')
     let prenume;
     let payload = {uid} 
     fetch(`http://localhost:8000/login`, {method: 'POST', body: JSON.stringify(payload), headers: {'Content-Type': 'application/json'}})
