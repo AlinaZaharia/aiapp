@@ -1,4 +1,6 @@
-
+body {
+  font-family: 'Yantramanav', sans-serif;
+}
 .App{
   display: flex;
   flex-direction: row;
@@ -7,20 +9,29 @@
   overflow: hidden;
 }
 
+.App > div {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 #divNavbar{
-  flex: 1;
+  flex: 0.5;
   background-color: #8aa5fc  
 }
 
 #divIcons{
+  display: flex;
   text-align: center;
   margin-top: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 #divIstoric{
   display: flex;
   flex-direction: column;
-  flex: 3;
+  flex: 2;
   background-color: #f4f4f7  
   
 }
@@ -30,46 +41,64 @@
 
 }
 
-#divPrincipal{
-  flex: 6;
+#divPrincipal, #divConvInit{
+  flex: 7.5;
   display: flex;
   flex-direction: column;
 }
 
-#divUtilizator{
+#divConvInit{
+  margin-left: 15px;
+  margin-top: 50px;
+  font-size: 30px;
+  font-style: italic;
+}
+
+#divUtilizator, #divmesajInitial{
   flex: 1;
 }
 
-#divContinut{
+#divContinut, #divInterm{
   flex: 7.5;
   overflow-y: auto;
 }
 
-#divMesaj{
+#divMesaj, #divMesaj2{
   flex: 1.5;
   display: flex;
   width: 100%;
-  border: 1px solid #f4f4f7
+  border: 1px solid #f4f4f7;
+  height: 20px;
 }
 
 
 
 
 
-#inputMesaj :focus{
+#inputMesaj:focus, #inputMesaj2:focus{
   outline: none;
 }
 
-#parSend{
+#parSend, #parSend2{
   width: 40px;
   height: 40px;
   background-color: #8aa5fc;
   border-radius: 10%;
   text-align: center;
   align-self: center;
+  cursor: pointer;
+  
+}
+#parSend2{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
-#inputMesaj{
+
+
+#inputMesaj, #inputMesaj2{
   align-self: center;
   background-color: rgb(245, 243, 243);
 }
@@ -88,6 +117,7 @@
   align-items: center;
   border-radius: 4%;
   font-size: 18px;
+  cursor: pointer;
 
 }
 
@@ -102,11 +132,7 @@
   flex: 1;
 }
 
-#divMesaj{
-  height: 20px;
-}
-
-#divMare{
+#divMare,#divTransparent{
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -114,12 +140,22 @@
   
 }
 
+#divTransparent{
+background-color: rgba(253, 251, 250, 0.148);
+z-index: 1;
+position: absolute;
+/* filter: blur(8px); */
+backdrop-filter: blur(5px)
+}
+
 #divTop{
   flex: 3;
   align-self: center;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
+
 #pCreareCont{
   font-size: 25px;
   font-weight: bold;
@@ -193,6 +229,7 @@
   align-content: flex-start;
   padding-left: 7px;
   padding-right: 7px;
+  cursor: pointer;
 }
 
 
@@ -217,3 +254,115 @@
 
 }
 
+.divClicat {
+  background-color: #eaeaf8;
+}
+
+#spanOptions{
+ cursor: pointer; 
+}
+
+
+.dropDownDeschis{
+  display: flex;
+  flex-direction: column;
+  /* gap: 15px; */
+  background-color: white;
+  /* width: 180px; */
+  /* height: 180px; */
+  z-index: 2;
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  border: 1px solid rgb(230, 227, 227);
+  border-radius: 5%;
+  /* padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px; */
+}
+
+.dropDownDeschis *{
+  
+}
+
+.dropDownInchis{
+  display: none;
+}
+
+.itemDD{
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  /* margin-left: 15px; */
+  /* margin-top: 7px; */
+  gap: 5px;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.itemDD:hover{
+  background-color: #e8ebf7;
+}
+
+.divSucces{
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#butonSignIn{
+  height: 35px;
+    background-color: pink;
+    width: 125px;
+    border-radius: 5px;
+}
+
+#divAlert{
+  position: relative;
+  z-index: 2;
+  top: calc(50vh - 66px);
+}
+
+.divItemContinutIstoric{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+  position: relative;
+  height: 50px;
+}
+
+#divMesajEroare{
+  text-align: center;
+  font-size: larger;
+  color: red;
+}
+.butonCreeazaLink{
+  width: 100px;
+  height: 35px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+#divLinkConv{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+#divPrincShare {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.divDots{
+  display: flex;
+  gap: 10px;
+  align-items: center; 
+}
+
+.FaStar{
+  color: #ff9700;
+}

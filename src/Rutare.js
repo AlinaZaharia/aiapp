@@ -7,6 +7,9 @@ import {useState, useEffect, createContext} from 'react';
 import {RouterProvider} from "react-router-dom";
 import {getAuth, onAuthStateChanged} from "firebase/auth";
 import { logare } from './diverse';
+import Redirect from './components/Redirect';
+import Welcome from './Welcome';
+import Share from './Share';
 
 
 let AccountContext = createContext();
@@ -27,10 +30,24 @@ const Rutare = () => {
 
     const [account, setAccount] = useState({});
     const router = createBrowserRouter([
+
+      {
+        path: "/",
+        element: <Redirect />,
+      },
+
         {
-          path: "/",
+          path: "/c",
           element: <App />,
+          children: [
+            {
+              path: "/c/:idConvURL",
+              element: <App />,
+              
+            },
+          ],
         },
+        
       
         {
           path: "/register",
@@ -40,8 +57,18 @@ const Rutare = () => {
         {
           path: "/login",
           element: <Login />
+        },
+
+        {
+          path: "/welcome",
+          element: <Welcome />
+        },
+        {
+          path: "/share",
+          element: <Share />
         }
-      ]);
+
+    ]);
       
   return (
     <div>
